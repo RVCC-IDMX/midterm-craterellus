@@ -1,0 +1,246 @@
+/* Journey to the Center of the Earth Practicum */
+/* Sarah Lopez */
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(#765729, black);
+    font-size: 16px;
+    justify-content: center;
+    align-content: center;
+}
+
+/*All page sections Bg color, shadow*/
+
+header, nav, main, aside, footer{
+    margin-bottom: 5px;
+}
+
+nav, main, aside, footer{
+    background-color: rgba(255, 255, 255, 0.75);
+    box-shadow: 10px 10px 5px inset #696969;
+    border:1px solid #886644;
+}
+
+
+main, aside{
+    padding: 20px 20px;
+}
+
+
+
+/* Header */
+
+header {
+    background-image: url(../img/cave.jpg);
+    background-position: center;
+    box-shadow: 30px 30px 20px inset #000000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border:2px solid #886644;
+    background-size: 800px;
+    padding: 20px 15px 20px 15px;
+}
+
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-family: Georgia, Times, serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 7px 7px 5px black;
+}
+
+
+
+/* Nav */
+
+nav {
+    font-size: 15px;
+    text-align: center;
+    padding: 5px 15px;
+}
+
+nav ul{
+    padding:0px;
+}
+
+nav ul li{
+    display: inline;
+    padding: 0px 15px;
+}
+
+nav ul li:nth-child(odd) {
+    border-right: 5px double black;
+}
+
+nav ul li:nth-child(2) {
+    border-right: 5px double black;
+}
+
+/*Links*/
+
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #765729;
+    text-decoration: underline;
+}
+
+
+/*Main*/
+
+h2 {
+    border-bottom: dashed 1px;
+
+}
+
+main p:first-of-type::first-line {
+    font-size: 19px;
+}
+
+.character {
+    font-weight:bold;
+}
+
+#cover {
+max-width: 200px;
+float: left;
+margin: 10px 20px 20px 10px;
+}
+
+:lang(fr), :lang(it), :lang(id) {
+    font-style: italic;
+}
+
+
+/* Cryptogram */
+
+#cryptogram img{
+width: 200px;
+margin: auto;
+}
+
+#cryptogram{
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+/* Book Reviews */
+
+.submission{
+    background-color: #dcdbda;
+    border: 2px solid;
+    padding:10px;
+    margin: 10px;
+    font-size: 16px;
+}
+.opinion{
+    text-align:center;
+}
+
+.signature{
+    text-align: right;
+    font-style:italic;
+}
+
+/* Footer */
+
+footer{
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border:2px solid #886644;
+}
+
+footer p:first-child{
+    padding-top: 20px;
+}
+
+
+/*tablet size */
+
+@media screen and (min-width: 785px){
+    nav{
+        font-size: 17px;
+    }
+
+    header{
+        background-size:1300px;
+    }
+
+    aside{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    aside h2{
+        grid-column: span 4;
+    }
+
+    .signature{
+        text-align: center;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    #cryptogram img{
+       width: 500px;
+    }
+
+}
+
+
+/*Desktop size */
+
+@media screen and (min-width: 1024px){
+    body{
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 1024px;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        padding:0 5px;
+    }
+
+
+    header, nav, footer{
+        grid-column: span 3;
+        min-width: 1024px;
+        max-width: 1200px;
+    }
+
+
+    main{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+
+    aside{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+
+    aside{
+        display:block;
+    }
+
+    header, nav, main, aside, footer{
+        margin-bottom: 10px;
+        /* margin-left: 5px;
+        margin-right: 5px; */
+    }
+}
