@@ -2,7 +2,7 @@
 /* Sarah Lopez */
 
 body {
-    background-color: #765729;
+    background-image: linear-gradient(#765729, black);
     margin: 5px;
     font-size: 16px;
 }
@@ -10,7 +10,7 @@ body {
 /*All page sections Bg color, shadow*/
 
 nav, main, aside, footer{
-    background-color: #d0cbc5;
+    background-color: rgba(255, 255, 255, 0.75);
     margin-bottom: 5px;;
     box-shadow: 10px 10px 5px inset #696969;
     border:1px solid #886644;
@@ -20,6 +20,8 @@ nav, main, aside, footer{
 main, aside{
     padding: 20px 20px;
 }
+
+
 
 /* Header */
 
@@ -37,7 +39,7 @@ h1 {
     font-family: Georgia, Times, serif;
     font-size: 30px;
     font-weight: bold;
-    text-shadow: 5px 5px black;
+    text-shadow: 7px 7px 5px black;
 }
 
 
@@ -68,12 +70,17 @@ nav ul li:nth-child(2) {
     border-right: 5px double black;
 }
 
-/*Links in Nav*/
+/*Links*/
 
 a:link {
-    color: #000000
+    color: #000000;
+    text-decoration: none;
 }
 
+a:hover {
+    color: #765729;
+    text-decoration: underline;
+}
 
 
 /*Main*/
@@ -97,7 +104,9 @@ float: left;
 margin: 10px 20px 20px 10px;
 }
 
-
+:lang(fr), :lang(it), :lang(id) {
+    font-style: italic;
+}
 
 
 /* Cryptogram */
@@ -117,7 +126,7 @@ align-self: auto;
 /* Book Reviews */
 
 .submission{
-    background-color: #dbdbda;
+    background-color: #dcdbda;
     border: 2px solid;
     padding:10px;
     margin: 10px;
