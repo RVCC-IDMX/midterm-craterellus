@@ -29,11 +29,12 @@ h1 {
     color: #FFFFFF;
     text-align: center;
     background-image: url(../img/cave.jpg);
+    background-position: center;
     box-shadow: 20px 20px 20px inset #000000;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border:2px solid #886644;
-    background-size: 470px;
+    background-size: 800px;
     margin: 2px;
     padding: 30px 15px 30px 15px;
     font-family: Georgia, Times, serif;
@@ -149,4 +150,32 @@ footer{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     border:2px solid #886644;
+}
+
+
+/*tablet size */
+
+@media screen and (min-width: 785px){
+    h1, body, nav, main, aside, footer{
+        margin-bottom:8px;
+    }
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    aside h2{
+        grid-column: span 3;
+    }
+    h1{
+        font-size: 50px;
+        background-size: 1000px;
+        box-shadow: 30px 30px 30px inset #000000;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    #cryptogram img{
+        max-width: 500px;
+
+    }
+
 }
